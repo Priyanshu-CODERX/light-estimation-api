@@ -22,7 +22,7 @@ public class LightEstimationManager : MonoBehaviour
     }
 
     private void OnEnable() => cameraManager.frameReceived += FrameUpdated;
-    private void OnDisable() => cameraManager.frameReceived += FrameUpdated;
+    private void OnDisable() => cameraManager.frameReceived -= FrameUpdated;
 
     private void Update()
     {
